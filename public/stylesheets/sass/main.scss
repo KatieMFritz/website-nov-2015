@@ -1,44 +1,46 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
-main {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
+// $body-bg: #6600cc;
+// $jumbotron-bg: #efefef;
+// $jumbotron-heading-font-size: 36px;
+// $jumbotron-font-size: 18px;
+// $border-radius-base: 8px;
+// $border-radius-small: 4px;
+// $border-radius-large: 10px;
+// $brand-primary: #009933;
+// $brand-success: #00cc44;
+// $text-muted: #ddd;
+$font-family-sans-serif: 'Lato', 'Arial', sans-serif;
+$headings-font-weight:  700;
+$font-size-base: 18px;
 
-.navbar-static-top {
-  margin-bottom: 19px;
-}
+@import 'bootstrap';
 
-nav img {
-  max-width: 45px;
-  margin: 0 10px;
-}
-
-i.fa {
-  font-size: 1.25em;
-}
-
-@media (min-width: 768px) {
-  .navbar-right {
-    margin-right: 15px;
+/*************************************
+NAVIGATION
+**************************************/
+.navbar-fixed-top {
+  img {
+    max-width: 45px;
+    margin: 0 10px;
+  }
+  i.fa {
+    font-size: 1.25em;
   }
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.navbar-collapse {
+  min-height: 100px;
 }
+
+/* Move down content because we have a fixed navbar that is 50px tall */
 main {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  padding-top: 100px;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
+
+/****************************************
+footer
+*****************************************/
+
+footer {
   background-color: #f5f5f5;
   padding-top: 20px;
 }
