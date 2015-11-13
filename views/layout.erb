@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body class="container">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="pull-left" href="/"><img src="images/KMF-logo-symbol.png" alt="logo" height="45px"></a> -->
+          <a class="navbar-brand" href="#">Katie M Fritz, LLC</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Serice 3</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://www.facebook.com/KatieMFritzLLC/">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/katiemfritz">LinkedIn</a></li>
+            <li><a href="https://github.com/KatieMFritz">Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <main>
+    <%= yield %>
+    </main>
+
+    <footer>
+      <p>&copy; Katie M Fritz, LLC 2015</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
