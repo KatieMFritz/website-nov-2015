@@ -5,7 +5,4 @@ class KatieWebsite < Sinatra::Base
     erb :home
   end
 
-  get '/test' do
-    erb :test
-  end
 end
