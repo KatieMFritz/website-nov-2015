@@ -7,3 +7,38 @@ main {
 .navbar-static-top {
   margin-bottom: 19px;
 }
+
+nav img {
+  max-width: 45px;
+  margin: 0 10px;
+}
+
+i.fa {
+  font-size: 1.25em;
+}
+
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: 15px;
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+main {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-top: 20px;
+}
