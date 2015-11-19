@@ -17,4 +17,11 @@ class KatieWebsite < Sinatra::Base
     erb :services
   end
 
+	helpers do
+
+		def current_year
+			Time.now.year
+		end
+		
+	end
 end
