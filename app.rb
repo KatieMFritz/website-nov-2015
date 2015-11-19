@@ -17,11 +17,24 @@ class KatieWebsite < Sinatra::Base
     erb :services
   end
 
+	get '/faq' do
+		erb :faq
+	end
+
 	helpers do
 
 		def current_year
 			Time.now.year
 		end
-		
+
+		def faq(question, answer)
+			%(
+        <details>
+					<summary class="h2">#{question}</summary>
+            <div class="well">#{answer}</div>
+        </details>
+			)
+		end
+
 	end
 end

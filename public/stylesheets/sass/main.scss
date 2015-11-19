@@ -10,8 +10,9 @@ $gray: #6d6e71;
 
 //Typography
 $font-family-sans-serif: 'Lato', 'Arial', sans-serif;
-$font-size-base: 16px;
+$font-size-base: 18px;
 $headings-font-weight:  700;
+$font-size-h2: floor($font-size-base * 1.5);
 
 //Iconography
 
@@ -31,7 +32,7 @@ $navbar-height: 100px;
 //Inverted Navbar  //Shared nav styles  //Tabs  //Pills //Pagination //padding-base-vertical
 
 //Jumbotron
-//$jumbotron-color: $brand-secondary;
+@jumbotron-bg: $brand-secondary;
 
 //Form states and alerts //Tooltips //Popovers //Labels  //Modals  //Alerts //Progress Bars //List group //Panels //Thumbnails
 
@@ -73,18 +74,15 @@ main {
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -1px;
 }
 
-img#about-headshot {
-	max-width: 200px;
-}
 /*****************************************
 STRIPES
 ******************************************/
 .stripe {
 	padding: 30px 0;
 }
+
 #service1 {
 	background-color: $gray-light;
 }
@@ -96,26 +94,21 @@ STRIPES
 /****************************************
 footer
 *****************************************/
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-footer {
-  background-color: #f5f5f5;
-  padding-top: 20px;
+  height: 100px;
+	background-color: $gray;
+	padding-top: 10px;
 }
