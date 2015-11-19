@@ -10,7 +10,7 @@ $gray: #6d6e71;
 
 //Typography
 $font-family-sans-serif: 'Lato', 'Arial', sans-serif;
-$font-size-base: 18px;
+$font-size-base: 16px;
 $headings-font-weight:  700;
 
 //Iconography
@@ -21,7 +21,7 @@ $padding-base-vertical: 10px;
 //Tables //Buttons //Forms //Dropdowns //Media queries breakpoints
 
 //Grid System
-$grid-gutter-width: 40px;
+//$grid-gutter-width: 40px;
 
 //Container Sizes
 
@@ -31,7 +31,7 @@ $navbar-height: 100px;
 //Inverted Navbar  //Shared nav styles  //Tabs  //Pills //Pagination //padding-base-vertical
 
 //Jumbotron
-$jumbotron-color: $brand-secondary;
+//$jumbotron-color: $brand-secondary;
 
 //Form states and alerts //Tooltips //Popovers //Labels  //Modals  //Alerts //Progress Bars //List group //Panels //Thumbnails
 
@@ -56,25 +56,64 @@ NAVIGATION
   }
 }
 
-.navbar-collapse {
-  //min-height: 100px;
-}
-
 /* Move down content because we have a fixed navbar that is 50px tall */
 main {
   padding-top: 100px;
 }
 
+/*****************************
+ Featurettes
+**********************************/
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+img#about-headshot {
+	max-width: 200px;
+}
 /*****************************************
 STRIPES
 ******************************************/
+.stripe {
+	padding: 30px 0;
+}
 #service1 {
-	background-color: #ccc;
+	background-color: $gray-light;
+}
+
+#service2 {
+	background-color: lighten($brand-primary, 50%);
 }
 
 /****************************************
 footer
 *****************************************/
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
 
 footer {
   background-color: #f5f5f5;
