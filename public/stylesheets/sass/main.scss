@@ -1,17 +1,45 @@
-// $body-bg: #6600cc;
-// $jumbotron-bg: #efefef;
-// $jumbotron-heading-font-size: 36px;
-// $jumbotron-font-size: 18px;
-// $border-radius-base: 8px;
-// $border-radius-small: 4px;
-// $border-radius-large: 10px;
-// $brand-primary: #009933;
-// $brand-success: #00cc44;
-// $text-muted: #ddd;
-$font-family-sans-serif: 'Lato', 'Arial', sans-serif;
-$headings-font-weight:  700;
-$font-size-base: 18px;
+/***********************************
+BOOTSTRAP VARIABLES
+http://getbootstrap.com/customize/#less-variables
+***********************************/
+//Colors
+$brand-primary: #1997A9; //blue
+$brand-secondary: #439539; //green
+$gray-base: #07080B;
+$gray: #6d6e71;
 
+//Typography
+$font-family-sans-serif: 'Lato', 'Arial', sans-serif;
+$font-size-base: 18px;
+$headings-font-weight:  700;
+
+//Iconography
+
+//Components
+$padding-base-vertical: 10px;
+
+//Tables //Buttons //Forms //Dropdowns //Media queries breakpoints
+
+//Grid System
+$grid-gutter-width: 40px;
+
+//Container Sizes
+
+//Navbar
+$navbar-height: 100px;
+
+//Inverted Navbar  //Shared nav styles  //Tabs  //Pills //Pagination //padding-base-vertical
+
+//Jumbotron
+$jumbotron-color: $brand-secondary;
+
+//Form states and alerts //Tooltips //Popovers //Labels  //Modals  //Alerts //Progress Bars //List group //Panels //Thumbnails
+
+//Wells //Badges  //Breadcrumbs  //Carousel  //Close  //Code //Type
+
+/****************************
+IMPORT BOOTSTRAP
+*****************************/
 @import 'bootstrap';
 
 /*************************************
@@ -19,16 +47,17 @@ NAVIGATION
 **************************************/
 .navbar-fixed-top {
   img {
-    max-width: 45px;
-    margin: 0 10px;
+    max-width: 200px;
+		margin-top: -35px;
   }
   i.fa {
     font-size: 1.25em;
+		color: $brand-primary;
   }
 }
 
 .navbar-collapse {
-  min-height: 100px;
+  //min-height: 100px;
 }
 
 /* Move down content because we have a fixed navbar that is 50px tall */
