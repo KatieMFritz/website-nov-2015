@@ -28,11 +28,20 @@ class KatieWebsite < Sinatra::Base
 		end
 
 		def faq(question, answer)
+			id = question.gsub(/\W/, '')
 			%(
-        <details>
-					<summary class="h2">#{question}</summary>
-            <div class="well">#{answer}</div>
-        </details>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="##{id}">#{question}</a>
+						</h3>
+				 	</div>
+				 	<div id="#{id}" class="panel-collapse collapse in">
+						<div class="panel-body">
+							#{answer}
+						</div>
+				 	</div>
+				</div>
 			)
 		end
 
@@ -50,7 +59,7 @@ class KatieWebsite < Sinatra::Base
 
 		def top
 			%(
-				<a href="#"><i class="glyphicon glyphicon-menu-up top" title="back to top"></i></a>
+				<a href="#" class="top"><i class="glyphicon glyphicon-menu-up" title="back to top"></i></a>
 			)
 		end
 

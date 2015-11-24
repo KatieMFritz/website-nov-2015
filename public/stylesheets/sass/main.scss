@@ -93,12 +93,15 @@ main {
 }
 
 /**************************************
-TYPOGRAPHY
+GLOBAL
 **************************************/
 .lead {
 	font-size: floor($font-size-base * 1.2);
 }
 
+.center {
+	text-align: center;
+}
 /**********************************
 HOME
 *************************************/
@@ -109,7 +112,6 @@ HOME
 /*****************************
  ABOUT (Featurettes)
 **********************************/
-
 .featurette-divider {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }

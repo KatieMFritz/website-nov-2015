@@ -5843,10 +5843,13 @@ main {
   /* Increase margin bottom by footer height */ }
 
 /**************************************
-TYPOGRAPHY
+GLOBAL
 **************************************/
 .lead {
   font-size: 21px; }
+
+.center {
+  text-align: center; }
 
 /**********************************
 HOME
