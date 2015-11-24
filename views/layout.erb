@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
+  <body class=<%= @bodyclass %>>
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,9 +31,12 @@
             <li class="dropdown">
               <a href="/services" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/services">Service 1</a></li>
-                <li><a href="/services">Service 2</a></li>
-                <li><a href="/services">Serice 3</a></li>
+                <li><a href="/services#webdesign">Sustainable Web Design</a></li>
+                <li><a href="/services#webstrategy">Web Strategy Package</a></li>
+                <li><a href="/services#ia">Information Architecture Package</a></li>
+								<li><a href="/services#usertesting">User Testing Package</a></li>
+                <li><a href="/services#review">Website Review Package</a></li>
+                <li><a href="/services#coaching">Website Coaching</a></li>
               </ul>
             </li>
             <li><a href="https://www.facebook.com/KatieMFritzLLC/"><i class="fa fa-facebook-official" title="Facebook"></i></a></li>
@@ -50,8 +53,8 @@
 
     <footer class="footer">
       <div class="container">
-				<div class="well pull-right"<p><a href="#">Back to top</a></p></div>
-        <div class="well col-sm-8"><p>&copy; Katie M Fritz, LLC 2015-<%= current_year %></p></div>
+				<div class="pull-right"<p><a href="#">Back to top</a></p></div>
+        <div><p>&copy; Katie M Fritz, LLC 2015-<%= current_year %></p></div>
       </div>
     </footer>
 

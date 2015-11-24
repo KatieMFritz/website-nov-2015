@@ -4,7 +4,7 @@ http://getbootstrap.com/customize/#less-variables
 ***********************************/
 //Colors
 $brand-primary: #1997A9; //blue
-$brand-secondary: #439539; //green
+$brand-secondary: #60A058; //green
 $gray-base: #07080B;
 $gray: #6d6e71;
 
@@ -12,19 +12,14 @@ $gray: #6d6e71;
 $font-family-sans-serif: 'Lato', 'Arial', sans-serif;
 $font-size-base: 18px;
 $headings-font-weight:  700;
-$font-size-h2: floor($font-size-base * 1.5);
+$font-size-h2: ceil($font-size-base * 1.5);
 
 //Iconography
 
 //Components
 $padding-base-vertical: 10px;
 
-//Tables //Buttons //Forms //Dropdowns //Media queries breakpoints
-
-//Grid System
-//$grid-gutter-width: 40px;
-
-//Container Sizes
+//Tables //Buttons //Forms //Dropdowns //Media queries breakpoints //Grid System //Container Sizes
 
 //Navbar
 $navbar-height: 100px;
@@ -32,11 +27,17 @@ $navbar-height: 100px;
 //Inverted Navbar  //Shared nav styles  //Tabs  //Pills //Pagination //padding-base-vertical
 
 //Jumbotron
-@jumbotron-bg: $brand-secondary;
+$jumbotron-bg: $brand-secondary;
 
 //Form states and alerts //Tooltips //Popovers //Labels  //Modals  //Alerts //Progress Bars //List group //Panels //Thumbnails
 
-//Wells //Badges  //Breadcrumbs  //Carousel  //Close  //Code //Type
+//Wells
+$well-bg: #eee;
+
+//Badges  //Breadcrumbs  //Carousel  //Close  //Code
+
+//Type
+$hr-border: #ddd;
 
 /****************************
 IMPORT BOOTSTRAP
@@ -54,6 +55,9 @@ NAVIGATION
   i.fa {
     font-size: 1.25em;
 		color: $brand-primary;
+		&:hover {
+			color: lighten($brand-primary, 30%);
+		}
   }
 }
 
@@ -62,6 +66,20 @@ main {
   padding-top: 100px;
 }
 
+/**********************************
+MISC
+*************************************/
+body.home, body.contact, body.about, body.services {
+	background-color: $brand-primary;
+}
+
+.lead {
+	font-size: floor($font-size-base * 1.2);
+}
+
+.home .jumbotron h1 {
+	color: #fff;
+}
 /*****************************
  Featurettes
 **********************************/
@@ -70,26 +88,30 @@ main {
   margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
 
 /*****************************************
 STRIPES
 ******************************************/
 .stripe {
-	padding: 30px 0;
+	padding: 60px 0;
 }
 
-#service1 {
+.services div.stripe:nth-child(even) {
 	background-color: $gray-light;
 }
 
-#service2 {
-	background-color: lighten($brand-primary, 50%);
-}
 
 /****************************************
 footer
