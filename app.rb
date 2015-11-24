@@ -36,5 +36,23 @@ class KatieWebsite < Sinatra::Base
 			)
 		end
 
+		def icon(icon="arrow-right")
+			%(
+				<i class="glyphicon glyphicon-#{icon}"></i>
+			)
+		end
+
+		def fa_icon(icon)
+			%(
+				<i class="fa fa-#{icon}"></i>
+			)
+		end
+
+		def top
+			%(
+				<a href="#"><i class="glyphicon glyphicon-menu-up top" title="back to top"></i></a>
+			)
+		end
+
 	end
 end

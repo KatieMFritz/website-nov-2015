@@ -1079,7 +1079,7 @@ body {
   font-size: 18px;
   line-height: 1.42857;
   color: #2f3549;
-  background-color: #fff; }
+  background-color: #1997A9; }
 
 input,
 button,
@@ -1117,7 +1117,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #fff;
+  background-color: #1997A9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2226,7 +2226,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #fff; }
+    background-color: #1997A9; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3609,7 +3609,7 @@ tbody.collapse.in {
         border-color: #f6f7f9 #f6f7f9 #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #6d6e71;
-      background-color: #fff;
+      background-color: #1997A9;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3667,7 +3667,7 @@ tbody.collapse.in {
     .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus,
     .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #fff; } }
+      border-bottom-color: #1997A9; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -4328,7 +4328,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 25px;
   line-height: 1.42857;
-  background-color: #fff;
+  background-color: #1997A9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -5814,47 +5814,55 @@ NAVIGATION
   .navbar-fixed-top i.fa:hover {
     color: #71dbea; }
 
-/* enable hover on menu dropdowns */
-@media only screen and (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block; } }
 /* Move down content because we have a fixed navbar */
 main {
   padding-top: 100px; }
 
-/**********************************
-MISC
-*************************************/
-body.home, body.contact, body.about, body.services {
-  background-color: #1997A9; }
+/* enable hover on menu dropdowns */
+@media only screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block; } }
+/****************************************
+FOOTER (fixed footer)
+*****************************************/
+html {
+  position: relative;
+  min-height: 100%; }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  /* Set the fixed height of the footer here */
+  background-color: #6d6e71;
+  padding-top: 20px; }
+
+main {
+  margin-bottom: 100px;
+  /* Increase margin bottom by footer height */ }
+
+/**************************************
+TYPOGRAPHY
+**************************************/
 .lead {
   font-size: 21px; }
 
+/**********************************
+HOME
+*************************************/
 .home .jumbotron h1 {
   color: #fff; }
 
 /*****************************
- Featurettes
+ ABOUT (Featurettes)
 **********************************/
 .featurette-divider {
   margin: 80px 0;
   /* Space out the Bootstrap <hr> more */ }
 
-/* centered columns styles */
-.row-centered {
-  text-align: center; }
-
-.col-centered {
-  display: inline-block;
-  float: none;
-  /* reset the text-align */
-  text-align: left;
-  /* inline-block space fix */
-  margin-right: -4px; }
-
 /*****************************************
-STRIPES
+SERVICES (Stripes)
 ******************************************/
 .stripe {
   padding: 60px 0; }
@@ -5863,28 +5871,15 @@ STRIPES
   margin-top: -110px;
   padding-top: 110px; }
 .services div.stripe:nth-child(even) {
-  background-color: #bcd8b9; }
+  background-color: #9dc698; }
 .services div.stripe:nth-child(odd) {
-  background-color: #71dbea; }
+  background-color: #20bfd5; }
 
-/****************************************
-footer
-*****************************************/
-html {
-  position: relative;
-  min-height: 100%; }
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 100px; }
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 100px;
-  background-color: #6d6e71;
-  padding-top: 10px; }
+/* back to top links on services page */
+.services a .top {
+  font-weight: 700;
+  color: #6d6e71; }
+  .services a .top:hover {
+    color: #1997A9; }
 
 /*# sourceMappingURL=main.css.map */
