@@ -36,7 +36,7 @@ class KatieWebsite < Sinatra::Base
 							<a data-toggle="collapse" data-parent="#accordion" href="##{id}">#{question}</a>
 						</h3>
 				 	</div>
-				 	<div id="#{id}" class="panel-collapse collapse in">
+				 	<div id="#{id}" class="panel-collapse collapse">
 						<div class="panel-body">
 							#{answer}
 						</div>
