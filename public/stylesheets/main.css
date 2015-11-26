@@ -5851,6 +5851,11 @@ GLOBAL
 .center {
   text-align: center; }
 
+main a {
+  text-decoration: underline; }
+  main a.btn {
+    text-decoration: none; }
+
 /**********************************
 HOME
 *************************************/
@@ -5864,9 +5869,23 @@ HOME
   margin: 80px 0;
   /* Space out the Bootstrap <hr> more */ }
 
+.about main img {
+  max-height: 300px;
+  vertical-align: center;
+  border-radius: 4px;
+  padding-top: 15px; }
+
+.featurette > div {
+  display: table-cell; }
+
 /*****************************************
 SERVICES (Stripes)
 ******************************************/
+#toc {
+  padding-top: 75px; }
+  #toc .lead {
+    margin-bottom: 10px; }
+
 .stripe {
   padding: 60px 0; }
 
@@ -5884,5 +5903,10 @@ SERVICES (Stripes)
   color: #6d6e71; }
   .services a .top:hover {
     color: #1997A9; }
+
+.services i {
+  padding-right: 10px; }
+  .services i.fa {
+    font-size: 1.25em; }
 
 /*# sourceMappingURL=main.css.map */

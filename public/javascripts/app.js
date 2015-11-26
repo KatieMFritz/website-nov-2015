@@ -5,7 +5,6 @@ $(document).on('click', 'a.top', function(event){
 
 $(document).on('click', '#services-menu li a', function(event){
 	event.preventDefault();
-	console.log('Howdy');
 	$('html, body').animate({
 		scrollTop: $(event.target.getAttribute('href')).offset().top
 	});
