@@ -24,6 +24,8 @@ $padding-base-vertical: 10px;
 
 //Navbar
 $navbar-height: 100px;
+$navbar-brand-logo-height: $navbar-height / 2;
+$navbar-brand-vertical-padding: ($navbar-height - $navbar-brand-logo-height) / 2;
 
 //Jumbotron
 $jumbotron-bg: $brand-secondary;
@@ -45,10 +47,13 @@ IMPORT BOOTSTRAP
 /*************************************
 NAVIGATION
 **************************************/
-.navbar-fixed-top {
-  img {
-    max-width: 200px;
-		margin-top: -35px;
+.navbar {
+  .navbar-brand {
+    padding-top: $navbar-brand-vertical-padding;
+    padding-bottom: $navbar-brand-vertical-padding;
+    > img {
+      height: $navbar-brand-logo-height;
+    }
   }
   i.fa {
     font-size: 1.25em;

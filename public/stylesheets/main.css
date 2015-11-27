@@ -5805,13 +5805,15 @@ button.close {
 /*************************************
 NAVIGATION
 **************************************/
-.navbar-fixed-top img {
-  max-width: 200px;
-  margin-top: -35px; }
-.navbar-fixed-top i.fa {
+.navbar .navbar-brand {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .navbar .navbar-brand > img {
+    height: 50px; }
+.navbar i.fa {
   font-size: 1.25em;
   color: #1997A9; }
-  .navbar-fixed-top i.fa:hover {
+  .navbar i.fa:hover {
     color: #71dbea; }
 
 /* Move down content because we have a fixed navbar */
