@@ -1,52 +1,65 @@
-/***********************************
-BOOTSTRAP VARIABLES
-http://getbootstrap.com/customize/#less-variables
-***********************************/
-//Colors
-$brand-primary: #1997A9; //blue
-$brand-secondary: #60A058; //green
+// ---------
+// VARIABLES
+// ---------
+
+// Bootstrap's variables:
+// http://getbootstrap.com/customize/#less-variables
+
+// Colors
+$brand-primary: #1E8A8E;
+$brand-secondary: #D6E9D1;
 $gray-base: #07080B;
-$gray: #6d6e71;
+$gray: #bdc3c7;
 
-//Scaffolding
+// Scaffolding
 $link-color: $brand-primary;
-$body-bg: $brand-primary;
+$body-bg: #EFEFE9;
+$grid-gutter-width: 30px;
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
 
-//Typography
-$font-family-sans-serif: 'Lato', 'Arial', sans-serif;
+// Typography
+$font-family-sans-serif: 'Open Sans', Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-base: 18px;
-$headings-font-weight:  700;
+$headings-font-weight: 700;
 $font-size-h2: floor($font-size-base * 1.6);
 $font-size-h3: ceil($font-size-base * 1.3);
 
-//Components
+// Components
 $padding-base-vertical: 10px;
 
-//Navbar
+// Navbar
+$navbar-default-bg: white;
 $navbar-height: 100px;
 $navbar-brand-logo-height: $navbar-height / 2;
 $navbar-brand-vertical-padding: ($navbar-height - $navbar-brand-logo-height) / 2;
 
-//Jumbotron
+// Jumbotron
 $jumbotron-bg: $brand-secondary;
 
-//Panels
+// Panels
+$panel-default-heading-bg: $brand-secondary;
+$panel-bg: white;
+$panel-heading-padding: #{$grid-gutter-width / 2} #{$grid-gutter-width};
+$panel-body-padding: $grid-gutter-width;
 
+// Wells
+$well-bg: white;
 
-//Wells
-$well-bg: #eee;
-
-//Type
+// Type
 $hr-border: #ddd;
 
-/****************************
-IMPORT BOOTSTRAP
-*****************************/
+// ---------
+// BOOTSTRAP
+// ---------
+
 @import 'bootstrap';
 
-/*************************************
-NAVIGATION
-**************************************/
+// ----------
+// NAVIGATION
+// ----------
+
 .navbar {
   .navbar-brand {
     padding-top: $navbar-brand-vertical-padding;
@@ -57,30 +70,28 @@ NAVIGATION
   }
   i.fa {
     font-size: 1.25em;
-		color: $brand-primary;
-		&:hover {
-			color: lighten($brand-primary, 30%);
-		}
+    color: $brand-primary;
+    &:hover {
+      color: lighten($brand-primary, 30%);
+    }
   }
 }
 
-/* Move down content because we have a fixed navbar */
+// Move down content because we have a fixed navbar
 main {
-  padding-top: 100px;
+  padding-top: $navbar-height + $navbar-margin-bottom;
 }
 
-
-/* enable hover on menu dropdowns */
+// enable hover on menu dropdowns
 @media only screen and (min-width:$screen-sm) {
-	.dropdown:hover .dropdown-menu {
-		display: block;
-	}
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
-
-/****************************************
-FOOTER (fixed footer)
-*****************************************/
+// ------
+// FOOTER
+// ------
 
 html {
   position: relative;
@@ -91,96 +102,121 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px; /* Set the fixed height of the footer here */
-	background-color: $gray;
-	padding-top: 20px;
+  height: 70px; /* Set the fixed height of the footer here */
+  background-color: $navbar-default-bg;
+  padding-top: 20px;
 }
 
 main {
   margin-bottom: 100px; /* Increase margin bottom by footer height */
 }
 
-/**************************************
-GLOBAL
-**************************************/
-.lead {
-	font-size: floor($font-size-base * 1.2);
+// ------
+// GLOBAL
+// ------
+
+main .container {
+  margin-bottom: $grid-gutter-width;
+  > .well, .row, .featurette {
+    &:first-child { margin-top: 0; }
+    &:last-child  { margin-bottom: 0; }
+  }
 }
 
-.center {
-	text-align: center;
+.well, .row, .featurette, [class^="col-"] {
+  > :first-child { margin-top: 0; }
+  > :last-child  { margin-bottom: 0; }
 }
 
 main a {
-	text-decoration: underline;
-	&.btn {
-		text-decoration: none;
-	}
+  text-decoration: underline;
+
+  &.btn { text-decoration: none; }
 }
 
-/**********************************
-HOME
-*************************************/
-.home .jumbotron h1 {
-	color: #fff;
+.well {
+  border: none;
+  padding: $grid-gutter-width;
 }
 
-/*****************************
- ABOUT (Featurettes)
-**********************************/
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+.panel {
+  border: none;
 }
 
-.about main img {
-	max-height: 300px;
-	vertical-align: center;
-	border-radius: $border-radius-base;
-	padding-top: 15px;
+.panel-heading {
+  padding: 0;
+  > h3 > a {
+    display: block;
+    padding: $panel-heading-padding;
+    text-decoration: none;
+  }
 }
 
-.featurette > div {
-	display: table-cell;
-}
-/*****************************************
-SERVICES (Stripes)
-******************************************/
-#toc {
-	padding-top: 75px;
-	.lead {
-		margin-bottom: 10px;
-	}
+.panel-body {
+  > :first-child { margin-top: 0; }
+  > :last-child  { margin-bottom: 0; }
 }
 
-.stripe {
-	padding: 60px 0;
+// ----
+// HOME
+// ----
+
+.home .jumbotron {
+  margin-top: -#{$navbar-margin-bottom};
+
+  h1 { color: $brand-primary; }
 }
 
-.services div.stripe {
-	.anchor {
-		margin-top: -110px;
-		padding-top: 110px;
-	}
-	&:nth-child(even) {
-		background-color: lighten($brand-secondary, 20%);
-	}
-	&:nth-child(odd) {
-		background-color: lighten($brand-primary, 10%);
-	}
+// -----
+// ABOUT
+// -----
+
+.featurette {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $grid-gutter-width;
+
+  p { @extend .lead; }
+
+  > div {
+    margin: 0;
+
+    img {
+      @extend .hidden-sm;
+      @extend .hidden-xs;
+      max-width: 300px;
+    }
+  }
 }
 
-/* back to top links on services page */
-.services a .top {
-	font-weight: 700;
-	color: $gray;
-	&:hover {
-		color: $link-color;
-	}
-}
+// --------
+// SERVICES
+// --------
 
-.services i {
-	padding-right: 10px;
-	&.fa {
-		font-size: 1.25em;
-	}
+// Back to top links on services page
+.services {
+  a .top {
+    font-weight: 700;
+    color: $gray;
+
+    &:hover { color: $link-color; }
+  }
+
+  i {
+    padding-right: 10px;
+
+    &.fa { font-size: 1.25em; }
+  }
+
+  .service {
+    padding: #{$grid-gutter-width * 2} 0;
+
+    &:nth-child(even) {
+      background-color: $brand-secondary;
+    }
+
+    > .container {
+      margin-bottom: 0;
+    }
+  }
 }

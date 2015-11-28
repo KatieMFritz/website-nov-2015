@@ -1,0 +1,24 @@
+- content_for :title do
+  | Contact
+- content_for :body_class do
+  | contact
+
+.container
+
+  h1 Contact
+
+.container
+
+  .well
+    p
+      ==> icon 'envelope'
+      ' The best way to reach me is at
+      a href="mailto:katie@katiemfritz.com"
+        | katie@katiemfritz.com
+      | .
+    p
+      ==> icon 'phone'
+      ' Prefer phone? Call my cell at
+      a href="tel:+15172923020"
+        | 517.292.3020
+      | . I’m in the Eastern time zone.

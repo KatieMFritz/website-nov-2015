@@ -1,0 +1,67 @@
+-
+  title: Sustainable Website Design & Development
+  icon: leaf
+  paragraphs:
+    - Most organizations go through a website lifecycle. Spend a lot of time and money creating a new site; launch the shiny new site; keep it updated and functional for a while; get busy and let things slide; start over. Sound familiar?
+    - But what if you never had to go through that cycle again? With the right strategy up front and a commitment to continuous small investments, you can keep your website relevant, valuable, and fresh indefinitely.
+  activities:
+    - Web strategy package (see below)
+    - Content coaching
+    - Sustainable, custom-designed website on you hosting account
+    - Documentation and training
+  price: Starts at $7,500
+
+-
+  title: Web Strategy Package
+  icon: knight
+  paragraphs:
+    - Not ready for a whole new website, but want to make improvements? Need to save money by developing your site in house? This essential package will point you in the right direction. Past clients have found these tools helpful not just for marketing, but also for program delivery.
+  activities:
+    - Analytics report and custom Google Analytics dashboard
+    - Content inventory of your current site
+    - Channel map
+    - Up to six persona descriptions
+    - Up to four user journeys
+    - Voice profile
+    - Voice/tone/style guide template
+    - Core content strategy statement
+  price: Starts at $2,500
+
+-
+  title: Information Architecture Package
+  icon: list
+  paragraphs:
+    - Can your users find what they need on your website, file system, wiki, or Intranet? If not, it’s getting in the way of your mission. Through user observations, card sorts, tree testing, and first click testing, I’ll refine your navigation menu or folder structure to save time and improve user experience.
+  activities:
+    - Sitemap, taxonomy, or folder structure tailored for your organization
+  price: Starts at $600
+
+-
+  title: User Testing Package
+  icon: flag
+  paragraphs:
+    - Tell me your website’s goals and target audiences, and I’ll find out how it can improve.
+  activities:
+    - Three actionable recommendations for improving your website’s user experience (based on user testing)
+    - As much access to the raw test data (may include reports, spreadsheets, notes, videos, images) as you'd like
+  price: Starts at $1,000
+
+-
+  title: Website Review Package
+  icon: edit
+  paragraphs:
+    - Are you generally happy with your website, but want to keep it fresh? I can coach your team through a website review process to clean up old content, catch features that aren’t working, improve search engine optimization, and generally revive your site. This is a great habit to do yearly – or more! After the first time, you’ll be equipped to manage future reviews on your own.
+  activities:
+    - Content inventory of your site
+    - Document kit for a DIY website review
+    - 4 weekly coaching sessions by phone or video
+  price: Starts at $600
+
+-
+  title: Website Coaching <br>(current and past clients only)
+  icon: phone-alt
+  paragraphs:
+    - If you’ve worked with me before and want a little extra help maintaining your site, no problem! We can work together by phone and/or Internet until you’re comfortable.
+  activities:
+    - Help with content creation, content revision, analytics, SEO, style guide, troubleshooting, or any other service offered above
+  price: "$75/hour (nonprofit rate: $60/hour); discounted retainers available"
