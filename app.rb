@@ -1,67 +1,64 @@
-require 'sinatra'
+require 'sinatra/base'
+require 'sinatra/reloader'
+require 'sinatra/content_for'
+
+require_relative './lib/service'
+require_relative './lib/faq'
 
 class KatieWebsite < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+  helpers Sinatra::ContentFor
+
+  # Templates use Slim:
+  # http://slim-lang.com/
+
   get '/' do
-    erb :home
+    slim :home
   end
 
   get '/about' do
-    erb :about
+    slim :about
   end
 
   get '/contact' do
-    erb :contact
+    slim :contact
   end
 
   get '/services' do
-    erb :services
+    @services = Service.all
+    slim :services
   end
 
-	get '/faq' do
-		erb :faq
-	end
+  get '/faq' do
+    @faqs = Faq.all
+    slim :faq
+  end
 
-	helpers do
+  helpers do
 
-		def current_year
-			Time.now.year
-		end
+    def current_year
+      Time.now.year
+    end
 
-		def faq(question, answer)
-			id = question.gsub(/\W/, '')
-			%(
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="##{id}">#{question}</a>
-						</h3>
-				 	</div>
-				 	<div id="#{id}" class="panel-collapse collapse">
-						<div class="panel-body">
-							#{answer}
-						</div>
-				 	</div>
-				</div>
-			)
-		end
+    def icon(icon="arrow-right")
+      %(
+        <i class="glyphicon glyphicon-#{icon}"></i>
+      )
+    end
 
-		def icon(icon="arrow-right")
-			%(
-				<i class="glyphicon glyphicon-#{icon}"></i>
-			)
-		end
+    def top
+      %(
+        <a href="#" class="top"><i class="glyphicon glyphicon-menu-up" title="back to top"></i></a>
+      )
+    end
 
-		def fa_icon(icon)
-			%(
-				<i class="fa fa-#{icon}"></i>
-			)
-		end
+    def page_title title
+      site_title = "Katie M Fritz, LLC"
+      return site_title unless title
+      "#{title} | #{site_title}"
+    end
 
-		def top
-			%(
-				<a href="#" class="top"><i class="glyphicon glyphicon-menu-up" title="back to top"></i></a>
-			)
-		end
-
-	end
+  end
 end

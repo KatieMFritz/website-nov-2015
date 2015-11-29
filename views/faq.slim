@@ -1,0 +1,19 @@
+- content_for :title do
+  | Frequently Asked Questions
+- content_for :body_class do
+  | faq
+
+.container
+  h1 Frequently Asked Questions
+
+.container
+  #accordion.panel-group
+    - @faqs.each do |faq|
+      .panel.panel-default
+        .panel-heading
+          h3.panel-title
+            a data-toggle="collapse" data-parent="#accordion" href="##{faq.id}"
+              = faq.question
+        .panel-collapse.collapse id="#{faq.id}"
+          .panel-body
+            == faq.answer
